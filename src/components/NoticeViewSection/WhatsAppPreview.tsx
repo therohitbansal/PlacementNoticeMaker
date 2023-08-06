@@ -27,7 +27,7 @@ function WhatsAppPreview() {
   }%\n- Min diploma %:${values.diploma_perc}%\n- Min UG %: ${
     values.ug_perc
   }%\n- Min PG %: ${values.pg_perc}%\n- Min Gap Year: ${
-    values.min_gap
+    values.max_gap
   } year\n\nAll the eligible and interested candidates are required to fill the form by *${dayjs(
     values?.form_submission_time
   ).format("hh:mm A")}* on *${dayjs(values?.form_submission_date).format(
@@ -187,10 +187,10 @@ function WhatsAppPreview() {
             </span>
           )}
 
-          {values.min_gap && (
+          {values.max_gap && (
             <span>
               - Min Gap Year:&nbsp;
-              {values.min_gap} year
+              {values.max_gap} year
               <br />
             </span>
           )}
