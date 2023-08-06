@@ -67,7 +67,7 @@ function Preview() {
             values.twelfth_perc ||
             values.diploma_perc ||
             values.ug_perc ||
-            values.pg_perc) && (
+            values.pg_perc || values.max_gap) && (
             <span>
               <b>Eligibility Criteria</b>
               <br />
@@ -132,10 +132,10 @@ function Preview() {
             </span>
           )}
 
-          {values.min_gap && (
+          {values.max_gap && (
             <span>
-              - Min Gap Year:&nbsp;
-              {values.min_gap} year
+              - Maximum Gap:&nbsp;
+              {values.max_gap} Years
               <br />
             </span>
           )}
