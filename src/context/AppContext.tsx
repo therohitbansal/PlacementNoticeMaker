@@ -18,7 +18,7 @@ type InitialStateType = {
   diploma_perc: string;
   ug_perc: string;
   pg_perc: string;
-  min_gap: string;
+  max_gap: string;
 
   // other details:
   form_link: string;
@@ -45,7 +45,7 @@ const initialState = {
   diploma_perc: "",
   ug_perc: "",
   pg_perc: "",
-  min_gap: "",
+  max_gap: "",
 
   // other details:
   form_link: "",
