@@ -15,7 +15,7 @@ import {
   NumberInput,
   ScrollArea,
 } from "@mantine/core";
-import { IconPercentage } from "@tabler/icons";
+import { IconPercentage,IconCalendarEvent} from "@tabler/icons";
 import InputMask from "react-input-mask";
 import { DatePicker, TimeInput } from "@mantine/dates";
 import {
@@ -224,6 +224,7 @@ function AddInfoSection() {
               label="Bond Period (in years)"
               variant="filled"
               name="bond_period"
+              rightSection={<IconCalendarEvent/>}
               defaultValue={state.bond_period}
               onChange={handleInput}
               withAsterisk
@@ -271,7 +272,7 @@ function AddInfoSection() {
                   mb="xs"
                   name="max_backlog"
                   variant="filled"
-                  label="Maximum backlogs allowed"
+                  label="Maximum Backlogs Allowed"
                   placeholder="Pick backlogs count"
                   data={maxBacklogs}
                   searchable
@@ -280,6 +281,23 @@ function AddInfoSection() {
                   onChange={handleBacklogsInput}
                   clearable
                 />
+              </List.Item>
+              <List.Item>
+                <Input.Wrapper id={id} label="Maximum Gap">
+                  <Input
+                    mb="xs"
+                    name="max_gap"
+                    variant="filled"
+                    component={InputMask}
+                    mask="9"
+                    id={id}
+                    placeholder="Maximum Year Of Gaps"
+                    rightSection={<IconCalendarEvent />}
+                    defaultValue={state.max_gap}
+                    onChange={handleInput}
+                    
+                  />
+                </Input.Wrapper>
               </List.Item>
               <List.Item>
                 <Input.Wrapper id={id} label="10th Percentage" withAsterisk>
@@ -358,22 +376,7 @@ function AddInfoSection() {
                   />
                 </Input.Wrapper>
               </List.Item>
-              <List.Item>
-                <Input.Wrapper id={id} label="Minimum Gap year">
-                  <Input
-                    mb="xs"
-                    name="min_gap"
-                    variant="filled"
-                    component={InputMask}
-                    mask="9"
-                    id={id}
-                    placeholder="Minimum year of gaps"
-                    rightSection={<IconPercentage />}
-                    defaultValue={state.min_gap}
-                    onChange={handleInput}
-                  />
-                </Input.Wrapper>
-              </List.Item>
+              
             </List>
           </div>
 
@@ -396,7 +399,7 @@ function AddInfoSection() {
               variant="filled"
               name="form_submission_date"
               placeholder="Pick date"
-              label="Form submission date"
+              label="Form Submission Date"
               withAsterisk
               clearable
               defaultValue={state.form_submission_date}
@@ -408,7 +411,7 @@ function AddInfoSection() {
               mb="xs"
               variant="filled"
               name="form_submission_time"
-              label="Form submission time"
+              label="Form Submission Time"
               format="12"
               withAsterisk
               clearable
